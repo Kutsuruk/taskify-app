@@ -12,7 +12,7 @@ const App:FC = () => {
         event.preventDefault()
 
         if (todo)
-            setTodos([...todos, {id: Date.now(), todo: todo, isDone: false}])
+            setTodos([...todos, {id: Date.now(), todoName: todo, isDone: false}])
             setTodo('')
     }
 
@@ -20,7 +20,7 @@ const App:FC = () => {
         <div className='App'>
             <span className="heading">Taskify</span>
             <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
-            {/*<TodoList />*/}
+            <TodoList todos={todos} setTodos={setTodos} />
         </div>
     );
 }

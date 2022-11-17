@@ -1,0 +1,37 @@
+.todosSingle {
+    display: flex;
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #d5a617;
+}
+
+.todosSingleText {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todosSingleText:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .todosSingle {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .todosSingle {
+        width: 100%;
+    }
+}

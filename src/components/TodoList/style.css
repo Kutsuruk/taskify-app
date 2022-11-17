@@ -1,0 +1,12 @@
+.todosListWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+    .todosListWrapper {
+        width: 95%;
+    }
+}
