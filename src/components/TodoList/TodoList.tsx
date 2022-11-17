@@ -10,18 +10,42 @@ type TodoListProps = {
 
 const TodoList:FC<TodoListProps> = ({todos, setTodos}) => {
     return(
-        <div className='todosListWrapper'>
-            {
-                todos.map(todo => (
-                    <SingleTodo
-                        key={todo.id}
-                        todo={todo}
-                        todos={todos}
-                        setTodos={setTodos}
-                    />
-                ))
-            }
-        </div>
+       <div className="container">
+           <div className="todos">
+               <span className="todosHeading">
+                   Active Tasks
+               </span>
+               <div className='todosListWrapper'>
+                   {
+                       todos.map(todo => (
+                           <SingleTodo
+                               key={todo.id}
+                               todo={todo}
+                               todos={todos}
+                               setTodos={setTodos}
+                           />
+                       ))
+                   }
+               </div>
+           </div>
+           <div className="todos remove">
+               <span className="todosHeading">
+                   Completed Tasks
+               </span>
+               <div className='todosListWrapper'>
+                   {
+                       todos.map(todo => (
+                           <SingleTodo
+                               key={todo.id}
+                               todo={todo}
+                               todos={todos}
+                               setTodos={setTodos}
+                           />
+                       ))
+                   }
+               </div>
+           </div>
+       </div>
     )
 }
 
